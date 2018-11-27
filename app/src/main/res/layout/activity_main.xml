@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="25dp"
+            android:weightSum="2">
+
+
+            <ImageView
+                android:id="@+id/add_task_view"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+
+                android:src="@drawable/ic_add_circular_button_outline_with_plus_sign" />
+
+            <TextView
+                android:id="@+id/taskDescription"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="Add a to-do..."
+                android:textColor="@android:color/primary_text_light" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewTasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp" />
+
+    </LinearLayout>
+</FrameLayout>
